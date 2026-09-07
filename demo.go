@@ -2,7 +2,6 @@ package main
 
 import (
 	"net"
-	"strings"
 	"github.com/http-wasm/http-wasm-guest-tinygo/handler"
 	"github.com/http-wasm/http-wasm-guest-tinygo/handler/api"
 )
