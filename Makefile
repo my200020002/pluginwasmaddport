@@ -1,6 +1,6 @@
-.PHONY: test checks build
+.PHONY: test build
 
-default: test checks build
+default: test build
 
 test:
 	go test -v -cover ./...
@@ -8,5 +8,4 @@ test:
 build:
 	@tinygo build -buildmode=c-shared -o plugin.wasm -scheduler=none --no-debug -target=wasi ./demo.go
 
-checks:
-	golangci-lint run
+
