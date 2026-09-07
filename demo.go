@@ -18,12 +18,6 @@ func handleRequest(req api.Request, resp api.Response) (next bool, reqCtx uint32
 	
 	req.Headers().Set("X-Debug-Source-Addr", addr)
 
-	_, port, err := net.SplitHostPort(addr)
-	if err != nil || port == "" {
-		req.Headers().Set("X-Real-Port", "0")
-		return true, 0
-	}
 
-	req.Headers().Set("X-Real-Port", port)
 	return true, 0
 }
