@@ -39,6 +39,7 @@ jobs:
 
       - name: Check and get dependencies
         run: |
+          go get github.com/http-wasm/http-wasm-guest-tinygo@main
           go mod download
           go mod tidy
           git diff --exit-code go.mod
